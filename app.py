@@ -4,6 +4,8 @@ import psutil
 import socket
 
 app = Flask(__name__, template_folder="./")
+DEBUG = False
+
 
 @app.route('/', methods=['GET'])
 def hello():
@@ -17,4 +19,4 @@ def hello():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=9090, debug=True)
+    app.run(host='0.0.0.0', port=9090, debug=DEBUG)
